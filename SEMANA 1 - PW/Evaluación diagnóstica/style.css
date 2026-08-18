@@ -1,0 +1,98 @@
+.botonAmarillo {
+  background: yellow;
+  color: #3c2f00;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  transition: transform 0.2s;
+}
+
+.botonAmarillo:hover {
+  transform: scale(1.05);
+}
+
+.etiquetaGris {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(180, 197, 255, 0.1);
+  border: 1px solid rgba(180, 197, 255, 0.3);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroFoto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: transform 0.8s ease;
+}
+
+.hero:hover .heroFoto {
+  transform: scale(1.08);
+}
+
+.heroSombra {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #11131b 0%,
+    rgba(17, 19, 27, 0.4) 55%,
+    transparent 100%
+  );
+}
+
+.heroContenido {
+  position: relative;
+  z-index: 10;
+  padding: 0 48px;
+  max-width: var(--ancho);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heroTituloFila {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.heroLogo {
+  width: 220px;
+}
+
+.seccionCabecera h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.grilla3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
