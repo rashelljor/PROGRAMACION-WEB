@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+  <header class="bg-dark text-white text-center py-4">
+    <p class="fw-bold">Buscar por nombre</p>
+    <input class="form-control py-4" type="text" id="pokemonInput" placeholder="Ejemplo: Pikachu">
+    <br>
+    <button class="btn btn-light" onclick="buscarPokemon()">Buscar pokemon</button>
+    <div id="resultado">
+
+    </div>
+  </header>
+</body>
+<script>
+  async function buscarPokemon(){
+    const pokemonInput = document.getElementById("pokemonInput").
+    value.
+    toLowerCase().
+    trim();
+
+    document.getElementById("resultado").innerHTML =`
+    <p>Buscando Información<p>`
+    
+    try{
+      const respuesta = await fetch("https://pokeapi.co/api/v2/pokemon/" + pokemonInput)
+      const pokemon = await respuesta.json();
+      let tipos = "tipo1";
+
+      document.getElementById("resultado").innerHTML = `
+      <br>
+      <h2 class="mb-8">${pokemon.name.toUpperCase()}</h2>
+      <h2 class="fw-bold">${pokemon.id}</h2>
+      <img style="background-color:white" class="img-fluid rounded" src="${pokemon.sprites.front_default}">
+      <img style="background-color:white" class="img-fluid rounded" src="${pokemon.sprites.front_shiny}">
+      <img style="background-color:white" class="img-fluid rounded" src="${pokemon.sprites.other.dream_world.front_default}">
+      <br>
+      <p>${tipos}</p>
+      `
+    }
+    catch(error){
+      console.error("error");
+    }
+  }
+
+</script>
+</html>
