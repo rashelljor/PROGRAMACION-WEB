@@ -4,34 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digipedia</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='50%' text-anchor='middle' dominant-baseline='central' font-size='80'>🌟</text></svg>"
+    />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body class="bg-dark">
-    <header>
-        <nav>
-
-        </nav>
+    <header class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/80f85cfd-3501-4ffa-85dd-546959cc47cd/d9a4yb9-385621b1-131a-4bc3-80dc-cb4137047651.png" alt="Logo de Digimon" width="100">
+    <nav>
+        <ul class="d-flex list-unstyled gap-3 m-0">
+        <li><a class="text-white text-decoration-none" href="#">Inicio</a></li>
+        <li><a class="text-white text-decoration-none" href="#">Buscador</a></li>
+        <li><button type="button" class="btn btn-warning" onclick="obtenerDigimonAleatorio()" >Aleatorio</button></li>
+        </ul>
+    </nav>
     </header>
     <main>
-        <section>
-            <h1 class="text-center text-white">Bienvenido a Digipedia</h1>
+        <section id="inicio" class="bg-dark text-white p-5 d-flex align-items-center justify-content-center text-center flex-column" 
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0,0,0,0.5)), url('https://m.media-amazon.com/images/S/pv-target-images/e756043f646e7cd6b953d8b668e65be829c1cd355140fb75d9661089c23c396c.jpg'); background-size: cover; background-position: top; min-height: 600px;">
+            <h1>Bienvenido a Digipedia</h1>
+            <p>Bienvenido a la enciclopedia digital definitiva. Utiliza nuestro buscador para consultar las fichas técnicas de tus Digimon favoritos: niveles, atributos, campos de pertenencia, árbol evolutivo y su repertorio de habilidades en tiempo real.</p>
         </section>
-        <section>
-            <h2 class="text-center text-white">Ingrese el nombre</h2>
-            <input type="text" id="pokemonInput" placeholder="Ejemplo: Pikachu">
-            <button onclick="buscarPokemon()">Buscar pokemon</button>
-            <div id="resultado"></div>
-        <aside>
-            <h2 class="text-center text-white">Ingrese el nombre</h2>
-            <input type="text" id="pokemonInput" placeholder="Ejemplo: Pikachu">
-            <button onclick="buscarPokemon()">Buscar pokemon</button>
-            <div id="resultado"></div>
-        </aside>
+        <section id="buscador">
+            <div class="text-center text-white p-5">
+                <h2>Buscador de Digimon</h2>
+                <p>Ingrese el nombre del Digimon que desea buscar y haga clic en el botón "Buscar".</p>
+                <input type="text" id="digimonInput" class="form-control" placeholder="Ejemplo: Angemon">
+                <br>
+                <button onclick="buscarDigimon()" class="btn btn-outline-info">Buscar Digimon</button>
+                <div id="resultado"></div>
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer class="bg-dark text-white p-3 text-center">
+        <p>&copy; 2026 Digipedia. Todos los derechos reservados.</p>
     </footer>
     <script src="appSEM02.js"></script>
 </body>
-
 </html>
