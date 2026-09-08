@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD de productos</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>CRUD de productos</h1>
+      <form id="Formulario">
+        <input type="hidden" id="ProductoId" placeholder="ID del producto" />
+        <div id="campo">
+          <label for="nombre">Nombre: </label>
+          <input type="text" id="nombre" placeholder="Nombre del producto" required/>
+        </div> <br>
+        <div id="campo">
+          <label for="precio">Precio: </label>
+          <input type="number" id="precio" placeholder="Precio del producto" step="0.1" min="0.1"/>
+        </div>
+        <button type="submit" id="guardar">Guardar</button>
+        <button type="reset" id="Borrar">Borrar</button>
+        <button type="button" id="actualizar">Actualizar</button>
+      </form>
+    </div>
+    <script type="module" src="src/crud.js"></script>
+  </body>
+</html>
