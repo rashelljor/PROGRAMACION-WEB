@@ -44,13 +44,9 @@ const btnCancelar =
 
 
 let personas = [];
-
 escucharPersonas((datos) => {
-
     personas = datos;
-
     mostrarPersonas();
-
 });
 
 function mostrarPersonas() {
@@ -80,15 +76,10 @@ function mostrarPersonas() {
             document.createElement("tr");
 
         fila.innerHTML = `
-
             <td>${persona.nombres}</td>
-
             <td>${persona.apellidos}</td>
-
             <td>${persona.telefono || ""}</td>
-
             <td>${persona.correo || ""}</td>
-
             <td>
 
                 <button
@@ -132,10 +123,7 @@ formulario.addEventListener(
 
             correo:
                 correo.value.trim()
-
         };
-
-
         try {
 
             if (personaId.value === "") {
@@ -156,9 +144,7 @@ formulario.addEventListener(
                 alert(
                     "Persona actualizada correctamente."
                 );
-
             }
-
             limpiarFormulario();
 
         } catch (error) {
