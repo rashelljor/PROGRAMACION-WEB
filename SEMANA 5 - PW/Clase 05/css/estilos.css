@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+header {
+    background: #1976d2;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+.formulario,
+.lista {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.formulario h2,
+.lista h2 {
+    margin-bottom: 20px;
+}
+
+.grupo {
+    margin-bottom: 15px;
+}
+
+.grupo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.grupo input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.grupo input:focus {
+    outline: none;
+    border-color: #1976d2;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    background: #1976d2;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button.cancelar {
+    background: #777;
+}
+
+.cabecera-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#contador {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+#mensaje {
+    padding: 15px;
+    text-align: center;
+    color: #666;
+}
+
+.tabla-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f1f1f1;
+}
+
+tr:hover {
+    background: #fafafa;
+}
+
+.btn-editar {
+    background: #f39c12;
+    margin-right: 5px;
+}
+
+.btn-eliminar {
+    background: #e74c3c;
+}
+
+@media (max-width: 700px) {
+
+    .contenedor {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .formulario,
+    .lista {
+        padding: 18px;
+    }
+
+    table {
+        min-width: 750px;
+    }
+}
