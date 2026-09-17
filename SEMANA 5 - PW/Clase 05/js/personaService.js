@@ -76,9 +76,7 @@ export function escucharPersonas(callback) {
                     id: documento.id,
                     ...documento.data()
                 });
-
             });
-
             callback(personas);
         }
     );
